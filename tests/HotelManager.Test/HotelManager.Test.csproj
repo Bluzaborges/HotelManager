@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.9.40" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Drivers\" />
+    <Folder Include="Reservations\Features\" />
+    <Folder Include="Rooms\Features\" />
+    <Folder Include="Users\Features\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\HotelManager.Abstraction\HotelManager.Abstraction.csproj" />
+    <ProjectReference Include="..\..\src\HotelManager.Application\HotelManager.Application.csproj" />
+    <ProjectReference Include="..\..\src\HotelManager.Core\HotelManager.Core.csproj" />
+    <ProjectReference Include="..\..\src\HotelManager.Data\HotelManager.Data.csproj" />
+    <ProjectReference Include="..\..\src\HotelManager.Query.Application\HotelManager.Query.Application.csproj" />
+    <ProjectReference Include="..\..\src\HotelManager.Query.Data\HotelManager.Query.Data.csproj" />
+    <ProjectReference Include="..\..\src\HotelManager.TestInfrastructure\HotelManager.TestInfrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
